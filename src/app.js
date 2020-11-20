@@ -11,6 +11,7 @@ const ExpenseDashboardPage = () => {
     </div>
 };
 
+
 const routes = (
     <BrowserRouter>
     <Route path="/" component={ExpenseDashboardPage}/>
