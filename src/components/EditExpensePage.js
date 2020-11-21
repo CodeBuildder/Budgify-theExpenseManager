@@ -1,6 +1,6 @@
 import React from 'react'
 
-const EditExpensePage = () => (
+const EditExpensePage = (props) => (
     <div>
         this is edit expense page.
     </div>
