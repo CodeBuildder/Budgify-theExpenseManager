@@ -1,5 +1,5 @@
 import { createStore, combineReducers} from 'redux';
-import { v4 as uuid4 } from 'uuid'
+import { v4 as uuid4 } from 'uuid';
 
 const addExpense = (
     {
@@ -124,6 +124,16 @@ const filterReducer = (state = filtersReducerDefaultState, action) => {
     }
 }
 
+const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate}) => {
+    return expenses.filter((expense) => {
+        const startDateMatch;
+        const endDateMatch
+        const textMatch
+
+        return startDateMatch && endDateMatch && textMatch
+    })
+}
+
 
 const store = createStore(
     combineReducers({
@@ -134,7 +144,11 @@ const store = createStore(
 )
 
 store.subscribe(() => {
-    console.log(store.getState())
+    
+    const state = store.getState()
+    const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+    console.log(visibleExpenses)
+    
 })
 
 const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 4000}))
