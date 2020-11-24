@@ -7,8 +7,7 @@ export default () => {
         combineReducers({
             expenses:expensesReducer,
             filters:filterReducer
-
         })
     )
-    return store
+    return store;
 }
