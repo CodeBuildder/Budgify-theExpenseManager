@@ -40,11 +40,11 @@ const setTextFilter = ( text = '') => ({
 })
 
 const sortByAmount = () => ({
-    type: 'SORT_BY_AMOUNT',  
+    type: 'SORT_BY_AMOUNT', 
 })
 
 const sortByDate = () => ({
-    type: 'SORT_BY_DATE',
+    type: 'SORT_BY_DATE'
 })
 
 const setStartDate = (startDate) => ({
@@ -91,7 +91,7 @@ const filtersReducerDefaultState = {
     endDate:undefined
 }
 
-const filterReducer = (state = filtersReducerDefaultState, action) => {
+const filtersReducer = (state = filtersReducerDefaultState, action) => {
 
     switch(action.type) {
         case 'SET_TEXT_FILTER':
@@ -131,20 +131,20 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate}) => {
         const textMatch = expense.description.toLowerCase().includes(text.toLowerCase())
 
         return startDateMatch && endDateMatch && textMatch;   
-    }).sort((a ,b) =>{
+    }).sort((a, b) =>{
         if(sortBy === 'date') {
-            return a.createdAt < b.createdAt ? 1: -1;
+            return a.createdAt < b.createdAt ? 1 : -1;
         } else if (sortBy === 'amount') {
-            return a.amount < b.amount ? 1: -1
+            return a.amount < b.amount ? 1 : -1;
         }
     })
-}
+};
 
 
 const store = createStore(
     combineReducers({
         expenses:expensesReducer,
-        filters:filterReducer
+        filters: filtersReducer
 
     })
 )

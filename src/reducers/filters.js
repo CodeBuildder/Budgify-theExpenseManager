@@ -5,7 +5,7 @@ const filtersReducerDefaultState = {
     endDate:undefined
 }
 
-const filterReducer = (state = filtersReducerDefaultState, action) => {
+const filtersReducer = (state = filtersReducerDefaultState, action) => {
 
     switch(action.type) {
         case 'SET_TEXT_FILTER':
@@ -38,4 +38,4 @@ const filterReducer = (state = filtersReducerDefaultState, action) => {
     }
 }
 
-export default filterReducer
+export default filtersReducer
