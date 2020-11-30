@@ -1,7 +1,6 @@
 {
-  "name": "Budgify",
+  "name": "budgify",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
@@ -44,5 +43,14 @@
     "webpack": "3.1.0",
     "webpack-dev-server": "2.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codebuilder2022/Budgify-theExpenseManager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Codebuilder2022/Budgify-theExpenseManager/issues"
+  },
+  "homepage": "https://github.com/Codebuilder2022/Budgify-theExpenseManager#readme",
+  "description": ""
 }
