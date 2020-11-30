@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/server.js",
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
@@ -20,6 +21,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "0.28.4",
+    "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "live-server": "^1.2.1",
     "moment": "^2.29.1",
